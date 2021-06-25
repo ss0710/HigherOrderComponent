@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-const hocDemo = (Component) => {
+const hocDemo = (Component, num) => {
     const NewComponent = () => {
         const [count, setCount] = useState(0);
 
         const handleClick = () => {
-            setCount(count + 1);
+            setCount(count + num);
         }
 
         return(
