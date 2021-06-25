@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
+import hocDemo from './Hoc';
 
-const Demo2 = () => {
-    const [count, setCount] = useState(0);
-
-    const handleClick = () => {
-        setCount(count + 1);
-    }
-
+const Demo2 = (props) => {
     return (
         <div>
             <h1>The Second Component</h1>
             <div>
-                <h4>the count is = {count}</h4>
-                <button onClick={handleClick}>Fire</button>
+            <h4>the count is = {props.count}</h4>
+            <button onClick={props.handleClick}>Fire</button>
             </div>
         </div>
     )
 }
 
-export default Demo2;
+export default hocDemo(Demo2);
